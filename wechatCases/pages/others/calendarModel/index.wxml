@@ -1,0 +1,6 @@
+<!--pages/others/calendarModel/index.wxml-->
+<calendar bind:select="onSelect">
+    <view class="calendar-select">
+        {{selectData}}
+    </view>
+</calendar>

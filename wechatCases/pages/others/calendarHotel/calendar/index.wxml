@@ -1,0 +1,3 @@
+<!--pages/others/calendarHotel/calendar/index.wxml-->
+<!-- 引用组件 -->
+<calendar id='calendar'></calendar>

@@ -1,0 +1,13 @@
+/* pages/others/slideDel/index.wxss */
+.warp-del{
+  overflow: hidden;
+  max-width: 100%;
+  background-color: #fff;
+}
+.demo-del{
+  height: 110rpx;
+  line-height: 110rpx;
+  padding: 0 10px;
+  font-size: 28rpx;
+  background-color: #fff;
+}

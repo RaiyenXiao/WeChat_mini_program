@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "滑动删除组件",
+  "usingComponents": {
+    "slidedel": "../../../components/slideDel/index"
+  }
+}

@@ -1,0 +1,9 @@
+<!--pages/others/slideDel/index.wxml-->
+<view>滑动删除</view>
+<view class='warp-del'>
+  <slidedel bind:del="delItem">
+    <view class='demo-del'>
+      左滑删除
+    </view>
+  </slidedel>
+</view>

@@ -1,0 +1,10 @@
+<!--pages/others/calendarHotel/index.wxml-->
+<view class="select_time">
+  <view>时间</view>
+  <view class="_time" bindtap="selectTime">
+    <text class="_text_plc" wx:if="{{ !checkInDate }}">请选择入住时间</text>
+    <text class="_check_time" wx:if="{{ checkInDate }}"
+      >{{ checkInDate }} 至 {{ checkOutDate }}（{{ stayDays }}晚）</text
+    >
+  </view>
+</view>

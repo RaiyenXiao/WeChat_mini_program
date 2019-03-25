@@ -1,0 +1,25 @@
+.del-warp{
+  width: 100%;
+  border-top: 1rpx solid #e5e5e5;
+  border-bottom: 1rpx solid #e5e5e5;
+  position: relative;
+}
+.slot-box{
+  width: 100%;
+}
+.flex-center {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-sizing:border-box;
+}  
+.work-area{
+  position: absolute;
+  width: 150rpx;
+  background: red;
+  height: 100%;
+  color: #fff;
+  font-size: 28rpx;
+  right: -150rpx;
+  top: 0;
+}

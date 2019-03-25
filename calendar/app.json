@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/calendar2/index",
+    "pages/index/index",
+    "pages/calendar/index",
+    "pages/logs/logs",
+    "pages/rili/index",
+    "component/calendar"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}

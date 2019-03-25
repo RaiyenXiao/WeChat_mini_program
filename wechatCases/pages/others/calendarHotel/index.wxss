@@ -1,0 +1,15 @@
+/* pages/others/calendarHotel/index.wxss */
+.select_time{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40rpx;
+    color: rgba(136, 145, 169, 1);
+    font-size: 32rpx;
+  }
+  .select_time ._text_plc{
+    color: rgba(136, 145, 169, .5);
+  }
+  .select_time ._check_time{
+    color: #1A2A4B;
+  }

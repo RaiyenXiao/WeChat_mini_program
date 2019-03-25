@@ -1,0 +1,4 @@
+<!--components/switch/index.wxml-->
+<view class="_switch">
+    <view class="switch {{isChecked ? 'toggle-on' :'toggle-off'}} {{ disabled ? 'disabled' :''}}" bindtap="changeSwitch"></view>
+</view>

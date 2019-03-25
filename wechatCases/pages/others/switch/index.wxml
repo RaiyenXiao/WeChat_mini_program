@@ -1,0 +1,8 @@
+<!--pages/others/switch/index.wxml-->
+<!-- <view class="_switch">
+    <view class="switch {{isChecked ? 'toggle-on' :'toggle-off'}}{{ disabled ? 'disabled' : '' }}" bindtap="SwitchChange"></view>
+</view> -->
+<view>使用组件</view>
+<switch isChecked="{{ isChecked }}" bind:change="switchChange"></switch>
+<view>禁用组件</view>
+<switch isChecked="{{ status }}" disabled ></switch>

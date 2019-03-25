@@ -1,0 +1,23 @@
+<!--pages/others/toast/index.wxml-->
+<import src="../../../templates/showToast/showToast.wxml" /> 
+<template is="showToast" data="{{showToast: showToast}}" /> 
+<view class="list">
+    <view>1.错误提示</view>
+    <view class='z_f' bindtap='bindToastOpen1'>TRY</view>
+</view>
+<view class="list">
+    <view>2.成功提示弹窗</view>
+    <view class='z_f' bindtap='bindToastOpen2'>TRY</view>
+</view>
+<view class="list">
+    <view>3.带背景弹窗</view>
+    <view class='z_f' bindtap='bindToastOpen3'>TRY</view>
+</view>
+<view class="list">
+    <view>4.带标题内容的确认取消弹窗</view>
+    <view class='z_f' bindtap='bindToastOpen4'>TRY</view>
+</view>
+<view class="list">
+    <view>5.确认取消弹窗</view>
+    <view class='z_f' bindtap='bindToastOpen5'>TRY</view>
+</view>
