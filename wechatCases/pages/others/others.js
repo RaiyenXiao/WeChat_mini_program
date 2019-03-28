@@ -23,7 +23,7 @@ Page({
         id: "calendar",
         name: "日历",
         open: false,
-        pages: ["calendarHotel","calendarModel"]
+        pages: ["calendarHotel","calendarModel","dateLater","timeSelect"]
       },
       {
         id: "Switch",
@@ -36,6 +36,12 @@ Page({
         name: "滑动删除",
         open: false,
         pages: ["slideDel"]
+      },
+      {
+        id: "Progress",
+        name: "进度条",
+        open: false,
+        pages: ["progress"]
       },
     ]
   },

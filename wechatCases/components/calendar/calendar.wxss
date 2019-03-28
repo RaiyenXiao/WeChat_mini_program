@@ -82,6 +82,14 @@ page{
   background-color: #FF6923;
   color: #fff; 
 }
+._date_panel_day .date-day.dayIn{
+ border-top-left-radius: 10rpx;
+ border-bottom-left-radius: 10rpx;
+}
+._date_panel_day .date-day.dayOut{
+  border-top-right-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+ }
 ._date_panel_day .date-day.bgwhite{
   background-color: #fff;
 }

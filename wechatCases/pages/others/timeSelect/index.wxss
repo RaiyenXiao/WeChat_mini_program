@@ -1,0 +1,8 @@
+/* pages/others/timeSelect/index.wxss */
+.picker_text{
+    color: #1A2A4B;
+}
+.input_text_phc{
+    color:rgba(9, 35, 68, .3);
+}
+

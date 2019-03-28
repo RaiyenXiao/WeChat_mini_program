@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "预定时间段",
+  "usingComponents": {
+    "time-select": "../../../components/timeSelect/index"
+  }
+}

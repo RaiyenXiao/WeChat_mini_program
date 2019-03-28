@@ -29,6 +29,7 @@ Component({
      */
     ready: function () {
         this.createDateListData();
+        console.log(this.data.today)
     },
     methods: {
         createDateListData: function () {
@@ -146,8 +147,10 @@ Component({
                     days[j].class = days[j].class + ' active';
                     if(this.data.markcheckInDate && this.data.markcheckOutDate){
                       days[j].outday = true;
+                      days[j].class = days[j].class + ' dayOut';
                     }else{
                       days[j].inday = true;
+                      days[j].class = days[j].class + ' dayIn';
                     }
                     break;
                   }
@@ -216,12 +219,12 @@ Component({
             let pages = getCurrentPages();
             let prevPage = pages[pages.length - 2];
             prevPage.setData({
-            checkInDate: _this.data.checkInDate,
-            checkOutDate:_this.data.checkOutDate,
-            stayDays:_this.data.stayDays
+                checkInDate: _this.data.checkInDate,
+                checkOutDate:_this.data.checkOutDate,
+                stayDays:_this.data.stayDays
             })
             wx.navigateBack({
-            delta: 1
+                delta: 1
             })
         }
     }

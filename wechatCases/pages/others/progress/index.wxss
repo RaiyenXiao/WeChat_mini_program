@@ -1,0 +1,178 @@
+/* pages/others/progress/index.wxss */
+page, 
+.page {
+  width: 100%;
+  height: 100%;
+}
+.page__bd {
+  height: 100%;
+  position: relative;
+}
+.warn {
+  color: #fff;
+  position: absolute;
+  top: 74rpx;
+  left: 50%;
+  margin-left: -300rpx;
+  width: 600rpx;
+  z-index: 99;
+  text-align: center;
+  font-size: 30rpx;
+}
+.circle {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  z-index: 98;
+  margin-left: -50%;
+  width: 100%;
+  height: 914rpx;
+}
+.timerCounter {
+  position: absolute;
+  z-index: 100;
+  color: #fff;
+  width: 150rpx;
+  height: 52rpx;
+  bottom: 148rpx;
+  left: 50%;
+  font-size: 34rpx;
+  box-sizing: border-box;
+  margin-left: -75rpx;
+  text-align: center;
+  line-height: 52rpx;
+  border-radius: 26rpx;
+  background-color: rgba(0, 0, 0, .5);
+}
+.reddot {
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 6rpx;
+  margin-right: 10rpx;
+  background-color: rgba(245, 86, 58, 1);
+}
+
+.footer {
+  background: rgba(253, 254, 254, .96);
+  left:0;
+  bottom:0;
+  width:100%;
+  padding:0;
+  border-top: none;
+  z-index: 101;
+}
+.footer.iphonex {
+  padding-bottom: 110rpx;
+}
+._button {
+  width: 100%;
+  height: 120rpx;
+  line-height: 120rpx;
+  border-radius: 0;
+  color: #fff!important;
+}
+._start_button {
+  background: rgba(0, 123, 255, 1);
+}
+._stop_button {
+  background: rgba(245, 86, 58, 1);
+}
+._upload_button {
+  background: rgba(136, 136, 136, 1);
+}
+.loading {
+  margin-right: 20rpx;
+  width: 34rpx;
+  height: 34rpx;
+  font-size: 34rpx;
+  -webkit-animation: roateAll 4s linear infinite;
+}
+@-webkit-keyframes roateAll {
+  0%{-webkit-transform:rotate(0deg);}
+  25%{-webkit-transform:rotate(90deg);}
+  50%{-webkit-transform:rotate(180deg);}
+  75%{-webkit-transform:rotate(270deg);}
+  100%{-webkit-transform:rotate(360deg);}
+}
+
+.footer button[disabled] {
+  background: rgba(71, 95, 253, .2);
+}
+.tui-loading-row{
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+.tui-loading-cell{
+  width: 100%;
+  display: table-cell;
+  text-align: center;
+}
+/*动画一：单个渐变  */
+.circle-line{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    position: relative;
+}
+.circle-line text{
+    display: block;
+    width: 50%;
+    height: 5px;
+    opacity: .7;
+    position: absolute;
+    top: calc(50% - 2.5px);
+    left: 0px;
+    transform-origin: center right; 
+    animation: circle 1.5s linear infinite; 
+}
+.circle-line text::before{
+    content: '';
+    display: block;
+    width: 15px;
+    height: 5px;
+    position: absolute;
+     top: 0;
+    right: 10px;
+    background-color: blue;
+}
+.circle-line text:nth-child(1){
+    transform: rotate(0deg);
+    animation-delay: 0.2s;
+}
+.circle-line text:nth-child(2){
+    transform: rotate(45deg);
+    animation-delay: 0.4s;
+}
+.circle-line text:nth-child(3){
+    transform: rotate(90deg);
+    animation-delay: 0.6s;
+}
+.circle-line text:nth-child(4){
+    transform: rotate(135deg);
+    animation-delay: 0.8s;
+}
+.circle-line text:nth-child(5){
+    transform: rotate(180deg);
+    animation-delay: 1s;
+}
+.circle-line text:nth-child(6){
+    transform: rotate(225deg);
+    animation-delay: 1.2s;
+}
+.circle-line text:nth-child(7){
+    transform: rotate(270deg);
+    animation-delay: 1.4s;
+}
+.circle-line text:nth-child(8){
+    transform: rotate(315deg);
+    animation-delay: 1.6s;
+}
+@keyframes circle {
+    0%{
+        opacity: 0.05;
+    }
+    100%{
+        opacity: 0.9;
+    }
+}

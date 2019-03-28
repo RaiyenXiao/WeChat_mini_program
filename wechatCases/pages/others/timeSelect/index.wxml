@@ -1,0 +1,12 @@
+<!--pages/others/timeSelect/index.wxml-->
+<picker bindchange="selectTime" value="{{index}}" range="{{timeArr}}" range-key="time_slot">
+    <view class="picker_text {{timeArr[index]?'':'input_text_phc'}}">
+        <text>{{timeArr[index]?timeArr[index].time_slot:"请选择到店时间"}}</text>
+    </view>
+</picker>
+<view>==============================</view>
+<time-select bind:select="onSelect">
+    <view class="time-select">
+        组件：{{selectData}}
+    </view>
+</time-select>

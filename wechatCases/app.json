@@ -10,7 +10,11 @@
     "components/calendarMoel/index",
     "pages/others/switch/index",
     "components/switch/index",
-    "pages/others/slideDel/index"
+    "pages/others/slideDel/index",
+    "pages/others/progress/index",
+    "pages/others/dateLater/index",
+    "pages/others/timeSelect/index",
+    "components/timeSelect/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",
