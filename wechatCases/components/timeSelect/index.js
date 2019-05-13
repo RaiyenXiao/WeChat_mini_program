@@ -3,7 +3,10 @@ Component({
    * 组件的属性列表
    */
   properties: {
-   
+    checkInDate:{
+      type:String,
+      value:''
+    },
   },
   /**
  * 组件的初始数据
@@ -11,6 +14,7 @@ Component({
   data: {
     timeArr: [
       { id: 0, time_slot: "00:00 — 01:00" },
+      { id: 1, time_slot: "01:00 — 02:00" },
       { id: 2, time_slot: "02:00 — 03:00" },
       { id: 3, time_slot: "03:00 — 04:00" },
       { id: 4, time_slot: "04:00 — 05:00" },
@@ -32,29 +36,50 @@ Component({
       { id: 20, time_slot: "20:00 — 21:00" },
       { id: 21, time_slot: "21:00 — 22:00" },
       { id: 22, time_slot: "22:00 — 23:00" },
-      { id: 23, time_slot: "23:00 — 00:00" },
+      { id: 23, time_slot: "23:00 — 24:00" },
+      { id: 24, time_slot: "次日00:00 — 01:00" },
+      { id: 25, time_slot: "次日01:00 — 02:00" },
+      { id: 26, time_slot: "次日02:00 — 03:00" },
+      { id: 27, time_slot: "次日03:00 — 04:00" },
+      { id: 28, time_slot: "次日04:00 — 05:00" },
+      { id: 29, time_slot: "次日05:00 — 06:00" },
+      { id: 30, time_slot: "次日06:00 — 07:00" },
     ],
-    show: false
+    show: false,
+    value:[0],//默认当前显示在第1个时间段
   },
    /**
    * 组件的方法列表
    */
+  ready: function() {
+    wx.setStorageSync('timeOri', this.data.timeArr);
+    this.setData({
+      checkInDate:this.data.checkInDate
+    });
+  },
   methods: {
     //初始化选择器信息
     toggleSelect: function () {
       let show = this.data.show
       if (show) return this.setData({ show: !show })
-      this.setData({
-        show: !show 
-      });
-    },
-    selectTime: function (e) {
-      var time = parseInt(new Date().getHours());    //返回小时数
-      let n = e.detail.value
-      this.setData({
-        index: n,
-        time_slot: this.data.timeArr[n].time_slot
-      })
+      let checkInDate = this.data.checkInDate
+      let hour = parseInt(new Date().getHours());    //返回当前小时数
+      let timeArr = wx.getStorageSync("timeOri");
+      //如果选中的入住时间是今天，那么时间段要去掉今天已经过去的时间
+      if(checkInDate == this.getCurrentMonthFirst()){
+        timeArr.splice(0,hour)
+        this.setData({
+          show: !show,
+          value:[0],//根据当前时间，默认选中最近的时间段 截断后默认都是第一个
+          timeArr:timeArr
+        });
+      }else{
+        this.setData({
+          show: !show,
+          value:[hour],
+          timeArr:timeArr
+        });
+      }
     },
     changeTimePicker: function (e) {
       const val = e.detail.value
@@ -63,6 +88,19 @@ Component({
         time_slot: this.data.timeArr[val].time_slot
       });
     },
+    //获取当前时间
+    getCurrentMonthFirst: function () {
+      var date = new Date();
+      var todate =
+        date.getFullYear() +
+        "-" +
+        (date.getMonth() + 1 < 10
+          ? "0" + (date.getMonth() + 1)
+          : date.getMonth() + 1) +
+        "-" +
+        (date.getDate() < 10 ? "0" + date.getDate() : date.getDate());
+      return todate;
+    },
     //关闭弹窗
     // 取消
     hideTime() {
@@ -70,11 +108,14 @@ Component({
     },
     //确定
     submit: function () {
+      let n = this.data.value
       this.setData({
-        show: false
+        show: false,
+        time_slot: this.data.timeArr[n].time_slot,
+        time_id:this.data.timeArr[n].id //小时
       },
       ()=>{       
-        const result=this.data.time_slot
+        const result=[this.data.time_slot,this.data.time_id]
         this.triggerEvent('select', result)
       }
       );

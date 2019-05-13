@@ -4,9 +4,7 @@
         <text>{{timeArr[index]?timeArr[index].time_slot:"请选择到店时间"}}</text>
     </view>
 </picker>
-<view>==============================</view>
-<time-select bind:select="onSelect">
-    <view class="time-select">
-        组件：{{selectData}}
-    </view>
-</time-select>
+<view>====== 自定义组件方式 ======</view>
+<time-slot bind:select="onSelect" checkInDate="{{checkInDate}}">
+    <view class="time-select {{selectData ==='请选择到店时间' ?'input_text_phc':''}}">{{selectData}}</view>
+</time-slot>

@@ -1,12 +1,27 @@
 //app.js
+// 环境变量配置
+const env = 'test' // dev, test, prod (开发、测试、生产环境) 
+const setting = require('config/' + env + '.js')
+/**
+ * Fundebug 打印日志
+ * 其它页面引用  app.globalData.fundebug.notify("TEST", "Hello, Fundebug!");
+ * 抛出的错误对象   app.globalData.fundebug.notifyError(new Error("TEST"));
+ */
+// var fundebug = require('utils/fundebug.1.0.0.min.js');
+// fundebug.init({
+//   apikey: setting.fundebug.apikey,
+//   silent: false
+// })
 App({
+  globalData: {
+    userInfo: null,
+    //fundebug: fundebug,
+    open_id_type: 1,
+    isIphoneX: false,
+    isIphone: false,
+    //WEB_VIEW_URL: setting.api.WEB_VIEW_URL,
+  },
   onLaunch: function () {
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -27,8 +42,21 @@ App({
         }
       }
     })
+    /**  获取手机信息 */
+    var that = this;
+    wx.getSystemInfo({
+      success(res) {
+        wx.setStorage({
+          key: 'sysinfo',
+          data: res,
+        })
+        if (res.platform === 'ios') {
+          that.globalData.isIphone = true
+        }
+        if (res.model.search('iPhone X') != -1) {
+          that.globalData.isIphoneX = true
+        }
+      }
+    })
   },
-  globalData: {
-    userInfo: null
-  }
 })

@@ -1,20 +1,18 @@
 {
   "pages": [
     "pages/others/others",
-    "pages/index/index",
+    "pages/home/home",
     "pages/others/toast/index",
     "pages/others/calendarHotel/index",
-    "components/calendar/calendar",
     "pages/others/calendarHotel/calendar/index",
     "pages/others/calendarModel/index",
-    "components/calendarMoel/index",
     "pages/others/switch/index",
-    "components/switch/index",
     "pages/others/slideDel/index",
     "pages/others/progress/index",
     "pages/others/dateLater/index",
     "pages/others/timeSelect/index",
-    "components/timeSelect/index"
+    "pages/home/Restaurant/index",
+    "pages/home/Restaurant/restaurant-time/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -33,7 +31,7 @@
         "selectedIconPath": "images/icon_classify_select.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/home/home",
         "text": "Home",
         "iconPath": "images/icon_home.png",
         "selectedIconPath": "images/icon_home_select.png"

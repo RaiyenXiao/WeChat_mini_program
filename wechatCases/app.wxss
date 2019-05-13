@@ -1,5 +1,6 @@
 /**app.wxss**/
 @import 'libs/css/weui.wxss';
+@import "templates/iconfont/iconfont.wxss";
 page {
   background-color: #f8f8f8;
   font-size: 16px;
@@ -48,4 +49,25 @@ page {
   width: 0;
   height: 0;
   color: transparent;
+}
+
+/* 弹性盒  */
+._flex {
+  display: flex;
+}
+
+._flex_item_center {
+  align-items: center;
+}
+
+._flex_justify_center {
+  justify-content: center;
+}
+
+._flex_space_between {
+  justify-content: space-between;
+}
+
+._flex_space_around {
+  justify-content: space-around;
 }

@@ -38,7 +38,15 @@
 		},
 		"miniprogram": {
 			"current": -1,
-			"list": []
+			"list": [
+				{
+					"id": -1,
+					"name": "饭店预订",
+					"pathName": "pages/home/Restaurant/index",
+					"query": "",
+					"scene": null
+				}
+			]
 		}
 	}
 }

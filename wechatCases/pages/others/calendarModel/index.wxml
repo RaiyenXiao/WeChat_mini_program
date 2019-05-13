@@ -1,6 +1,4 @@
 <!--pages/others/calendarModel/index.wxml-->
-<calendar bind:select="onSelect">
-    <view class="calendar-select">
-        {{selectData}}
-    </view>
-</calendar>
+<view bindtap="showCalendar">选择的日期：{{checkDate}}</view>
+<calendar bind:select="onSelect" show="{{show}}" checkDate="{{checkDate}}"></calendar>
+

@@ -12,6 +12,14 @@ Component({
     data: {
       type: Array,
       value: []
+    },
+    checkDate:{
+      type:String,
+      value:''
+    },
+    show:{
+      type: Boolean,
+      value: false
     }
   },
   /**
@@ -24,16 +32,29 @@ Component({
     today: DATE_YEAR + "-" + DATE_MONTH + "-" + DATE_DAY,
     currMonth: [], //当前显示月份
     systemInfo: {},
-    show: false,
     n: "0",
-    markData: false //选择标记
+    markData: false, //选择标记
   },
   /**
    * 组件的方法列表
    */
-  // ready: function() {
-  //   //this.createDateListData();
-  // },
+  ready: function() {
+    this.setData({
+      show: this.data.show,
+      dateList: this.createDateListData(),
+      checkDate:this.data.checkDate
+    });
+    //console.log(this.data.dateList)
+    var _this = this;
+    wx.getSystemInfo({
+      success: function(res) {
+        _this.setData({
+          systemInfo: res,
+          currMonth: _this.data.dateList[0],
+        });
+      }
+    });
+  },
   methods: {
     createDateListData: function() {
       var dateList = [];
@@ -130,7 +151,7 @@ Component({
       if (day < 10) tempDay = "0" + day;
 
       var date = year + "-" + tempMonth + "-" + tempDay;
-      if (this.data.markData || this.data.selectData === date) {
+      if (this.data.markData || this.data.checkDate === date) {
         this.setData({
           markData: false,
           dateList: this.createDateListData()
@@ -138,7 +159,7 @@ Component({
       }
       if (!this.data.markData) {
         this.setData({
-          selectData: date,
+          checkDate: date,
           markData: true,
           dateList: this.createDateListData()
         });
@@ -168,37 +189,51 @@ Component({
         dateList: dateList,
         currMonth: dateList[this.data.n]
       });
+      //console.log(this.data.dateList)
     },
     //初始化选择器信息
-    toggleSelect:function(){
-      let show = this.data.show
-      if (show) return this.setData({ show: !show })
-      this.setData({
-        dateList: this.createDateListData()
-      });
-      var _this = this;
-      wx.getSystemInfo({
-        success: function(res) {
-          _this.setData({
-            systemInfo: res,
-            currMonth: _this.data.dateList[0],
-            show: !show
-          });
-        }
-      });
-    },
+    // toggleSelect:function(){
+    //   let show = this.data.show
+    //   if (show) return this.setData({ show: !show })
+    //   this.setData({
+    //     dateList: this.createDateListData(),
+    //     checkDate:this.data.checkDate //从组件外部传入的选择的日期，若直接点击确定 默认时间就是组件外部之前选择的时间
+    //   });
+    //   //console.log(this.data.dateList)
+    //   var _this = this;
+    //   wx.getSystemInfo({
+    //     success: function(res) {
+    //       _this.setData({
+    //         systemInfo: res,
+    //         currMonth: _this.data.dateList[0],
+    //         show: !show
+    //       });
+    //     }
+    //   });
+    // },
     //关闭弹窗
     // 取消
     hideCalendar() {
-      this.setData({ show: false });
+      let dateList = this.createDateListData()
+      this.setData({ 
+        show: false ,
+        dateList: dateList,
+        currMonth: dateList[0],
+        markData: false,
+      });
     },
     //确定
     submitCalendar: function() {
+      let dateList = this.createDateListData()
       this.setData({
         show: false,
+        checkDate:this.data.checkDate,
+        dateList: dateList,
+        currMonth: dateList[0],
+        markData: false,
       },
         ()=>{       
-          const result=this.data.selectData
+          const result=this.data.checkDate
           this.triggerEvent('select', result)
         }
       );

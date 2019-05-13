@@ -1,23 +1,34 @@
 // pages/others/calendarModel/index.js
+var util = require("../../../utils/util.js");
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    selectData:'请选择预定时间'
+    selectData:'请选择预定时间',
+    checkDate: '',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let checkDate =  util.getDate();//默认选择当前日期
+    this.setData({
+      checkDate:checkDate,
+    })
+  },
+  showCalendar: function () {
+    this.setData({
+      show: true,
+      checkDate: this.data.checkDate
+    })
   },
   onSelect(e) { 
     console.log(e)
     this.setData({
-      selectData: e.detail
+      checkDate: e.detail
     })
   },
   /**

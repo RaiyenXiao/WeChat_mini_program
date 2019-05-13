@@ -1,4 +1,5 @@
 // pages/others/timeSelect/index.js
+var util = require("../../../utils/util.js");
 Page({
 
   /**
@@ -31,14 +32,18 @@ Page({
       {id:23,time_slot:"23:00 — 00:00"},
     ],
     show:true,
-    selectData:'请选择到店时间'
+    selectData:'请选择到店时间',
+    checkInDate:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let checkInDate =  util.getDate();
+    this.setData({
+      checkInDate:checkInDate,//这是选择的入住时间 这里没有选择默认为了当日
+    })
   },
   selectTime: function(e) {
     var time = parseInt(new Date().getHours());    //返回小时数
@@ -49,8 +54,10 @@ Page({
     })
   },
   onSelect(e) { 
+    console.log(e)
     this.setData({
-      selectData: e.detail
+      selectData: e.detail[0],
+      selectTimeId:e.detail[1]
     })
   },
 })

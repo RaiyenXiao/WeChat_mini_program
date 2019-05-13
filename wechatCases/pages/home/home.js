@@ -4,10 +4,17 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    list:[
+      {
+        id: "Restaurant",
+        name: "饭店预订表单样式",
+        open: false,
+        pages: ["Restaurant"]
+      }
+    ]
   },
   //事件处理函数
   bindViewTap: function() {
@@ -50,5 +57,19 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  kindToggle: function(e) {
+    var id = e.currentTarget.id,
+      list = this.data.list;
+    for (var i = 0, len = list.length; i < len; ++i) {
+      if (list[i].id == id) {
+        list[i].open = !list[i].open;
+      } else {
+        list[i].open = false;
+      }
+    }
+    this.setData({
+      list: list
+    });
   }
 })
