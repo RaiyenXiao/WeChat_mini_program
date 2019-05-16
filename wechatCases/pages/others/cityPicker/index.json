@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "城市选择",
+  "usingComponents": {
+    "city-picker": "/components/cityPicker/index"
+  }
+}

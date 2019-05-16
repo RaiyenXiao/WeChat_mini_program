@@ -43,6 +43,12 @@ Page({
         open: false,
         pages: ["progress"]
       },
+      {
+        id: "CityPicker",
+        name: "省市区选择",
+        open: false,
+        pages: ["cityPicker"]
+      },
     ]
   },
   kindToggle: function(e) {

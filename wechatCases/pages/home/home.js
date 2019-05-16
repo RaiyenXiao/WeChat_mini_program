@@ -13,6 +13,12 @@ Page({
         name: "饭店预订表单样式",
         open: false,
         pages: ["Restaurant"]
+      },
+      {
+        id: "Cashier",
+        name: "微信授权发票",
+        open: false,
+        pages: ["Cashier"]
       }
     ]
   },

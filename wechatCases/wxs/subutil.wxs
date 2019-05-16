@@ -1,0 +1,96 @@
+var removeFloor = function (floor) {
+  if (floor.indexOf('层' !== -1)) {
+    floor = floor.replace('层', '');
+    return floor;
+  } else {
+    return floor;
+  }
+}
+
+var removeFloor1 = function (floor,room) {
+console.log('floor:',floor)
+console.log('room:',room)
+let arrayFloor = floor.split(',');
+console.log('arrayFloor:',arrayFloor)
+let arrayRoom = room.split(',');
+console.log('arrayRoom:',arrayRoom)
+let arrayLen = arrayFloor.length;
+let arrayFandR = [];
+let FloorAnRoom = '';
+for (var i = 0; i < arrayLen; i++) {
+  let FloorAndRoom = arrayFloor[i] + ' ' + arrayRoom[i] + '室'
+  arrayFandR.push(FloorAndRoom)
+}
+switch (arrayLen) {
+  case 1:
+    FloorAnRoom = arrayFandR[0]
+    break;
+  case 2:
+    FloorAnRoom = arrayFandR[0]+','+' '+arrayFandR[1]
+    break;
+  case 3:
+    FloorAnRoom = arrayFandR[0]+','+' '+arrayFandR[1]+',' +'\n'+arrayFandR[2]
+
+    break;
+
+  default:
+
+}
+return FloorAnRoom
+}
+
+var transRoleName = function (role) {
+  if (role == 1) {
+    return '员工';
+  } else if (role == 2) {
+    return '前台（子管理员）';
+  } else if (role == 3) {
+    return '管理员';
+  }
+}
+
+var transRoleClassName = function (role, personType) {
+  if (role > 1) {
+    return '_role_admin';
+  } else {
+    if (personType == 3) {
+      return '_role_leader';
+    } else {
+      return '_role_staff';
+    }
+
+  }
+}
+
+var getFirstLetter = function (name) {
+  if (name.length) {
+    return name.substring(0, 1)
+  } else {
+    return ''
+  }
+}
+
+var returnArrayLength = function (arr) {
+  if (arr !=null) {
+    return arr.length;
+  } else {
+    return 0;
+  }
+}
+
+var joinFloorRoom = function (arrayFandR) {
+
+
+
+
+}
+var getCity = function (city) {
+  return city.split('市')[0]
+}
+module.exports.transRoleClassName = transRoleClassName;
+module.exports.removeFloor = removeFloor;
+module.exports.transRoleName = transRoleName;
+module.exports.getFirstLetter = getFirstLetter;
+module.exports.returnArrayLength = returnArrayLength;
+module.exports.joinFloorRoom = joinFloorRoom;
+module.exports.getCity = getCity;

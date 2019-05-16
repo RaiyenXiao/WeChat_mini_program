@@ -12,7 +12,9 @@
     "pages/others/dateLater/index",
     "pages/others/timeSelect/index",
     "pages/home/Restaurant/index",
-    "pages/home/Restaurant/restaurant-time/index"
+    "pages/home/Restaurant/restaurant-time/index",
+    "pages/others/cityPicker/index",
+    "pages/home/Cashier/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",

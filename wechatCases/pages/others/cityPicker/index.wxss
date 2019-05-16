@@ -1,0 +1,5 @@
+/* pages/others/cityPicker/index.wxss */
+._select_area{
+    font-size: 32rpx;
+    color: #092344;
+}

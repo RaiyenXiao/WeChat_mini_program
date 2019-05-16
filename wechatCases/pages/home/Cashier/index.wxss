@@ -1,0 +1,45 @@
+/* pages/Cashier/index.wxss */
+.infoBox{
+    padding: 0 40rpx;
+    background-color: #fff;
+}
+._item{
+    padding: 40rpx 0;
+    border-bottom: 1px solid #dedede;
+}
+._item:last-child{
+    border: none;
+}
+.switch {
+  position: relative;
+  width: 47px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: #ff6923;
+  text-align: center;
+}
+.switch::after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: left 0.2s ease-out;
+  -webkit-transition: left ease-out 0.2s;
+}
+.toggle-off {
+  background-color: #fff;
+  border: 1px solid #dee7f2;
+}
+.toggle-off::after {
+  left: 1px;
+  top: 1px;
+  box-shadow: 1px 2px 3px rgba(103, 116, 152, 0.28);
+}
+
+.toggle-on:after {
+  left: 24px;
+  top: 1px;
+}

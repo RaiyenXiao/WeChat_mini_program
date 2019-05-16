@@ -37,13 +37,19 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 1,
 			"list": [
 				{
 					"id": -1,
 					"name": "饭店预订",
 					"pathName": "pages/home/Restaurant/index",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "省市区选择",
+					"pathName": "pages/others/cityPicker/index",
 					"scene": null
 				}
 			]

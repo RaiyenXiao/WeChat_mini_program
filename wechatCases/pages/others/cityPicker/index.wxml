@@ -1,0 +1,12 @@
+<!--pages/others/cityPicker/index.wxml-->
+<wxs src="../../../wxs/subutil.wxs" module="tools" />
+<!-- <city-picker mode='2' codes='{{codes}}'  data="{{citylist}}"  bind:select="cityPicker">
+    <view class="input-picker _select_area">
+        <text>{{tools.getCity(city)}}</text>
+    </view>
+</city-picker> -->
+<city-picker mode='1' codes='{{codes}}'  data="{{citylist}}"  bind:select="cityPicker">
+    <view class="input-picker _select_area">
+        <text>{{city}}</text>
+    </view>
+</city-picker>
