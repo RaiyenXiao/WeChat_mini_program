@@ -19,6 +19,12 @@ Page({
         name: "微信授权发票",
         open: false,
         pages: ["Cashier"]
+      },
+      {
+        id: "Address",
+        name: "获取地址",
+        open: false,
+        pages: ["Address"]
       }
     ]
   },

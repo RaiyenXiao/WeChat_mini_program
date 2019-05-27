@@ -1,0 +1,5 @@
+<!--pages/home/Address/index.wxml-->
+<button bindtap='getLocation'>获取位置信息</button>
+<text>{{jingwei}}</text>
+<text>{{address}}</text>
+<text>{{name}}</text>

@@ -1,0 +1,32 @@
+/* components/marquee/marquee.wxss */
+.marquee_container{
+    width: 100%;
+    height: 60rpx;
+    background-color: #fff;
+    line-height: 60rpx;
+    margin-bottom: 40rpx;
+}
+.marquee_container .marquee_box {
+    width: 100%;
+    position: relative;
+} 
+.marquee_container .marquee_text {
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    /* font-size: 24rpx; */
+    color: #FF3A33;
+    display: flex;
+    align-items: center;
+}
+.marquee_container .marquee_text .icon_tip{
+    background-color: #FF3A33;
+    color: #fff;
+    border-radius: 100%;
+    width: 24rpx;
+    height: 24rpx;
+    font-size: 20rpx;
+    line-height: 24rpx;
+    text-align: center;
+    margin-right: 16rpx;
+}

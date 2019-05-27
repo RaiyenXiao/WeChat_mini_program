@@ -1,0 +1,3 @@
+<!--pages/others/Marquee/index.wxml-->
+<marquee text="这是一个向左的跑马灯"></marquee>
+<marquee-h news="{{newsArr}}"></marquee-h>

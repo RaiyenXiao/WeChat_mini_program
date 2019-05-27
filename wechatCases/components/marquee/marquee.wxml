@@ -1,0 +1,9 @@
+<!--components/marquee/marquee.wxml-->
+<view class="marquee_container">
+    <view class="marquee_box">
+        <view class="marquee_text" style="{{orientation}}:{{marqueeDistance}}px;font-size: {{size}}px;">
+            <view class="icon_tip">!</view>
+            <view>{{text}}</view>
+        </view>
+    </view>
+</view>

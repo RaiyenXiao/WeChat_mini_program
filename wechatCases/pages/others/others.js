@@ -37,17 +37,23 @@ Page({
         open: false,
         pages: ["slideDel"]
       },
-      {
-        id: "Progress",
-        name: "进度条",
-        open: false,
-        pages: ["progress"]
-      },
+      // {
+      //   id: "Progress",
+      //   name: "进度条",
+      //   open: false,
+      //   pages: ["progress"]
+      // },
       {
         id: "CityPicker",
         name: "省市区选择",
         open: false,
         pages: ["cityPicker"]
+      },
+      {
+        id: "Marquee",
+        name: "跑马灯",
+        open: false,
+        pages: ["Marquee"]
       },
     ]
   },

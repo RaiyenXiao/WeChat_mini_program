@@ -14,7 +14,9 @@
     "pages/home/Restaurant/index",
     "pages/home/Restaurant/restaurant-time/index",
     "pages/others/cityPicker/index",
-    "pages/home/Cashier/index"
+    "pages/home/Cashier/index",
+    "pages/home/Address/index",
+    "pages/others/Marquee/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -51,5 +53,11 @@
     "uploadFile": 10000,
     "downloadFile": 10000
   },
-  "debug": true
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
 }

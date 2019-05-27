@@ -1,0 +1,18 @@
+<view class='horizontal happnews'>
+    <view class='item happy_tui'>
+      <swiper vertical autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular >
+        <block wx:for="{{news}}">
+          <swiper-item>
+            <view class='show-text'>
+              <text class='icon_tui'>新闻</text>
+              <text class='news_title'>{{item}}</text>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  
+    <view class='more'>
+      <text>More</text>
+    </view>
+</view>
