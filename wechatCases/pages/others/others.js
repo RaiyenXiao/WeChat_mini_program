@@ -55,6 +55,12 @@ Page({
         open: false,
         pages: ["Marquee"]
       },
+      {
+        id: "TabBar",
+        name: "tab菜单",
+        open: false,
+        pages: ["tabBar"]
+      },
     ]
   },
   kindToggle: function(e) {

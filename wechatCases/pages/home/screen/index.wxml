@@ -1,0 +1,4 @@
+<!--pages/home/screen/index.wxml-->
+<view>
+    用于二维码这种需要调亮手机屏幕的情况
+</view>

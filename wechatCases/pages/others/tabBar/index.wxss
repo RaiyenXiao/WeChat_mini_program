@@ -1,0 +1,30 @@
+/* pages/others/tarBar/index.wxss */
+.tab-bar{
+    position: fixed;
+    /* height: 98rpx; */
+    width: 100%;
+    background-color: #f7f7fa;
+    z-index: 9999;
+}
+.tab-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    font-size: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    padding: 10rpx 0;
+}
+.menu-item .img {
+    width: 62rpx;
+    height: 62rpx;
+}
+.menu-item text {
+    font-size: 20rpx;
+    line-height: 1.4;
+}  

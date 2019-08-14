@@ -9,6 +9,12 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     list:[
       {
+        id: "Wechat",
+        name: "微信小程序API功能",
+        open: false,
+        pages: ["screen"]
+      },
+      {
         id: "Restaurant",
         name: "饭店预订表单样式",
         open: false,

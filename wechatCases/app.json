@@ -16,7 +16,9 @@
     "pages/others/cityPicker/index",
     "pages/home/Cashier/index",
     "pages/home/Address/index",
-    "pages/others/Marquee/index"
+    "pages/others/Marquee/index",
+    "pages/home/screen/index",
+    "pages/others/tabBar/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",

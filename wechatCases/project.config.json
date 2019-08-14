@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
@@ -53,6 +53,12 @@
 					"name": "省市区选择",
 					"pathName": "pages/others/cityPicker/index",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "自定义menu",
+					"pathName": "pages/others/tabBar/index",
 					"scene": null
 				}
 			]
