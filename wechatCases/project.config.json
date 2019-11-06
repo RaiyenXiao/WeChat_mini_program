@@ -56,9 +56,10 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "自定义menu",
-					"pathName": "pages/others/tabBar/index",
+					"id": 2,
+					"name": "上传图片",
+					"pathName": "pages/others/upload/uploadImg",
+					"query": "",
 					"scene": null
 				}
 			]

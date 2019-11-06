@@ -1,0 +1,21 @@
+<!--pages/others/upload/uploadImg.wxml-->
+<view class='upload-block up_broadcast'>
+    <view class='_font32'>
+        <view class='up_hint'>建议比例：16:9,最多6张</view>轮播图
+    </view>
+    <view class='_clearfloat'>
+        <view class='up_pub' wx:key="unique" wx:for-index="idx" wx:for="{{perImgSrc}}">
+            <view class='showpic'>
+                <image mode="aspectFill" src='{{item}}'></image>
+                <view class='clearpic _position' bindtap='bindclearpic' data-key='{{idx}}'>×</view>
+            </view>
+        </view>
+        <view class='up_pub' bindtap='uploadimages' data-num="6" data-key='product_urls'
+            wx:if="{{isSowingMapUp==false? false : true}}">
+            <view class='up_con'>
+                <view class='up_dot'></view>
+                <view class='up_text'>上传图片</view>
+            </view>
+        </view>
+    </view>
+</view>

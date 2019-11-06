@@ -32,6 +32,13 @@ Page({
         open: false,
         pages: ["Address"]
       }
+      ,
+      {
+        id: "circle",
+        name: "扇形按钮",
+        open: false,
+        pages: ["circle"]
+      }
     ]
   },
   //事件处理函数

@@ -1,0 +1,95 @@
+/* pages/others/upload/uploadImg.wxss */
+._clearfloat::after{
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0;
+}
+._clearfloat{
+    zoom: 1;
+}   
+.upload-block {
+    margin-top: 35rpx;
+    border-bottom: 1rpx solid #eeeeee;
+    padding: 30rpx;
+}
+._font32{
+    font-size: 32rpx;
+}
+.up_hint{
+    font-size: 22rpx;
+    float: right;
+    font-weight: 300;
+    color: #8891a9;
+}
+.up_pub {
+    background: #f3f5f9;
+    border-radius: 10rpx;
+    position: relative;
+    margin: 19rpx 0 6rpx 0;
+}
+
+.up_pub image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10rpx;
+}
+.clearpic {
+    width: 40rpx;
+    height: 40rpx;
+    border-radius: 40rpx;
+    background: #8891A9;
+    right: -8rpx;
+    top: -14rpx;
+    position: absolute;
+    color: #fff;
+    line-height: 34rpx;
+    border: 1rpx solid #fff;
+    text-align: center;
+    font-family: -BlinkMacSystemFont;
+    font-size: 30rpx;
+}
+.up_pub {
+    background: #f3f5f9;
+    border-radius: 10rpx;
+    position: relative;
+    margin: 19rpx 0 6rpx 0;
+}
+
+.up_pub image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10rpx;
+}
+.up_broadcast .up_pub {
+    width: 300rpx;
+    height: 170rpx;
+}
+.up_broadcast .up_pub {
+    float: left;
+}
+.up_con {
+    width: 124rpx;
+    height: 95rpx;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.up_dot {
+    width: 58rpx;
+    height: 66rpx;
+    margin: 0 auto;
+    background: url(http://slightech-marvin-wechat.oss-cn-hangzhou.aliyuncs.com/marvin-mini-program/picture@2x.png) no-repeat;
+    background-size: 100%;
+}
+.up_text {
+    color: #8891a9;
+    font-size: 30rpx;
+    text-align: center;
+    font-weight: 300;
+}

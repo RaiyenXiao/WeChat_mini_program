@@ -18,7 +18,9 @@
     "pages/home/Address/index",
     "pages/others/Marquee/index",
     "pages/home/screen/index",
-    "pages/others/tabBar/index"
+    "pages/others/tabBar/index",
+    "pages/home/circle/index",
+    "pages/others/upload/uploadImg"
   ],
   "window": {
     "navigationBarTextStyle": "black",

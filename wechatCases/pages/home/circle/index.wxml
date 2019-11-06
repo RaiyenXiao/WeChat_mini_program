@@ -1,0 +1,7 @@
+<!--pages/home/circle/index.wxml-->
+<view class="box">
+    <view class="s1"></view>
+    <view class="s2"></view>
+    <view class="s3"></view>
+    <view class="s4"></view>
+</view>
